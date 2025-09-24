@@ -7,7 +7,7 @@ use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\CustomerController;
 
 
-Route::get('/', [CustomerController::class, 'create']);
+Route::get('/', [AuthController::class, 'showLogin']); 
 Route::get('/register', [CustomerController::class, 'create'])->name('register');
 Route::post('/register', [CustomerController::class, 'store']);
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
